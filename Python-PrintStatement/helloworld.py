@@ -1,14 +1,12 @@
-print("Hello world")
+#A simple program that asks for user names and displays them
+print("Hello world, Welcome to my Python Learning Journey")
+#Asking name
+print("Welcome to my Name asking program\n")
+fname = input("What is your first name: \n")
+lname = input("What is your last name\n")
+
+#Display name
+print("Your name is", fname, lname)
 print()
-print("Blank line printed")
-
-print("Adding numbers")
-x = 42 + 206
-print(x)
-
-
-#Variables
-
-name = input("Whats is your name: ")
-print("Hello", name)
+print("Hello", fname, lname)
 
