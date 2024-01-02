@@ -6,6 +6,7 @@ def greet(first_name, last_name):
     
 greet("Mike", "Caleb") 
 
+print()
 
 def get_greet(name):
     return f"Hi {name}"
@@ -13,6 +14,7 @@ def get_greet(name):
 message = get_greet("Mike")
 print(message)
 
+print()
 
 #passing a variable number of arguments
 def multiply(*numbers):
@@ -23,6 +25,7 @@ def multiply(*numbers):
     
 print(multiply(2,3,4,5))
 
+print()
 
 #FIZZ BUZZING
 def fizz_buzz(number):
@@ -38,4 +41,48 @@ def fizz_buzz(number):
         print("No fizz, No Buzz")
 
 number = int(input("Enter to check number: "))
-(fizz_buzz(number))
+(fizz_buzz(number))   
+
+
+
+print()
+
+
+def grade_calc(score):
+    if score >= 80:
+        print("Grade A")
+    elif score >= 60 and score < 80:
+        print("Grade B")
+    elif score >= 50 and score < 60:
+        print("Grade C")
+    elif score < 50:
+        print("Grade F")
+    else:
+        print("Invalid Figure")
+
+marks = []
+
+
+while True: 
+    
+    user_score = input("Enter your scores for the semester(q to quit): ")
+    
+    if user_score == "q":
+        break
+
+    marks.append(int(user_score))
+    
+if marks:  
+    for mark in marks:
+        print(mark)
+    
+    total_marks = sum(marks)
+    avg_marks = total_marks / len(marks)
+
+    print("Your average marks is", avg_marks)
+    grade_calc(avg_marks)
+
+else:
+    print("No marks provided.")
+
+
